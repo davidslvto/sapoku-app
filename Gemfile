@@ -23,7 +23,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'gitolite'
 gem 'sidekiq'
-gem 'mina'
+gem 'mina', :git => "git://github.com/Mic92/mina.git"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
