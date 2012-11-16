@@ -1,0 +1,36 @@
+<% if @app.is_bootstrap_done? %>
+<h1><%= link_to @app.name, root_url(:subdomain => @app.name) %> is currently <% if (rand*10).to_i % 2 == 0 %><span class="ink-label caution">DOWN<span><% else %><span class="ink-label success">UP<span><% end %> </h1>
+<div class="row ink-vspace">
+	<div class="ink-l50">
+		<h4>Configure your git repo</h4>
+		<code>$><mark>git remote add sapoku git@sapoku.com:<%=@app.name%>.git</mark></code>
+		<p><em>you need to already have a git repo for the app.</em></p>
+	</div>
+</div>
+
+<div class="row ink-vspace">
+<div class="ink-l50">
+	<h2>Statistics</h2>
+	<dl>
+		<dt>CPU Usage</dt>
+		<dd><%= (rand * 100).to_i %>%</dd>
+		<dt>Memory Usage</dt>
+		<dd><%= (rand * 100).to_i %>%</dd>
+	</dl>
+</div>
+<div class="ink-l50">
+	<h2>Version History</h2>
+	<ul>
+		<li><mark>3adg44 - deployed 3 minutes ago</mark></li>
+		<li>gh28ad - deployed 1 week ago</li>
+		<li>fjfas8 - deployed 1 month ago</li>
+	</ul>
+</div>
+</div>
+<p><%= image_tag 'murray.png' %>  <%= link_to "Delete this app :'(", @app, :method => :delete, :confirm => 'Are you really sure? There is no turning back!'  %> </p>
+<% else %>
+	<%= content_for :header do %>
+		<meta http-equiv="refresh" content="3"/>
+	<% end %>
+	<div class="ink-alert ink-vspace"><p>Our ninjas are working hard to summon your app to life. Please wait a few moments longer!</p></div>
+<% end %>

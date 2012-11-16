@@ -1,0 +1,12 @@
+<h1>Welcome to SapoKu!</h1>
+<%= form_for @app, :html => {:class => 'ink-form block ink-l50'} do |f| %>
+	<fieldset>
+		<legend>One-click instant app</legend>
+		<div class="control">
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+			<p class="tip space short">this will be used for the url. no spaces please.</p>
+		</div>
+	<fieldset>
+	<button class="ink-button success">Go!</button>
+<% end %>

@@ -1,0 +1,30 @@
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'ink-form block ink-l50 ink-vspace'}) do |f| %>
+	<fieldset>
+		<legend>Sign in</legend>
+		<div class="control">
+			<%= f.label :email %>
+			<%= f.text_field :email %>
+		</div>
+
+		<div class="control">
+			<%= f.label :password %>
+	  		<%= f.password_field :password %>
+	  	</div>
+
+		<% if devise_mapping.rememberable? -%>
+	    <div class="control">
+	    	<%= f.check_box :remember_me %><%= f.label :remember_me %>
+	    </div>
+		<% end -%>
+	</fieldset>
+
+  <%= f.submit "Sign in", :class => 'ink-button success' %>
+<% end %>
+
+<%= content_for :footer do %>
+<nav class="ink-navigation">
+	<ul class="ink-footer-nav">
+	<%= render "devise/shared/links" %>
+	</ul>
+</nav>
+<% end %>

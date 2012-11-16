@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Sapoku @ Codebits</title>
+        <meta name="description" content="">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="http://css.ink.sapo.pt/v1/css/ink.css">
+		<!-- Js -->
+		<script type="text/javascript" src="http://js.sapo.pt/Bundles/Ink-v1.js"></script>
+		<!--[if IE]>
+			<link rel="stylesheet" href="http://css.ink.sapo.pt/v1/css/ink-ie.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<![endif]-->
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+		<%= yield :header %>
+	</head>
+	<body>
+		<div class="ink-container">
+			<% if flash.notice %><div class="ink-alert success"><button class="ink-close">&times;</button><p><%= flash.notice %></p></div><% end %>
+			<% if flash.alert %><div class="ink-alert error"><button class="ink-close">&times;</button><p><%= flash.alert %></p></div><% end %>
+			<nav class="ink-navigation ink-l100 ink-vspace">
+					<ul class="menu horizontal green">
+						<li class="ink-title"><a href="/">SapoKu</a></li>
+					<% if user_signed_in? %>
+						<li style="float:right;"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+						<% else %>
+						<li style="float:right;"><%= link_to('Login', new_user_session_path)  %></li>
+						<% end %>
+					</ul>
+				</nav>
+			<div class="ink-l100 ink-s100">
+      			<%= yield %>
+   			</div>
+		</div>
+		<footer>
+			<div class="ink-container">
+				<%= yield :footer %>
+				<p class="copyright">
+					All rights reserved.<br>
+					SapoKu is a trademark created at Codebits VI by Webreakstuff
+				</p>
+			</div>
+		</footer>
+	</body>
+</html>
