@@ -10,7 +10,7 @@ set :branch, 'master'
 
 # Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.
 # They will be linked in the 'deploy:link_shared_paths' step.
-set :shared_paths, ['log', 'tmp', 'public/system']
+set :shared_paths, ['config/database.yml', 'log', 'tmp', 'public/system']
 
 task :environment do
   # If you're using rbenv, use this to load the rbenv environment.
@@ -33,6 +33,9 @@ task :setup => :environment do
 
   queue! %[mkdir -p "#{deploy_to}/shared/config"]
   queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/config"]
+
+  queue! %[touch "#{deploy_to}/shared/config/database.yml"]
+  queue  %[-----> Be sure to edit 'shared/config/database.yml'.]
 end
 
 desc "Deploys the current version to the server."
