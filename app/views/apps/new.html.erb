@@ -7,6 +7,15 @@
 			<%= f.text_field :name %>
 			<p class="tip space short">this will be used for the url. no spaces please.</p>
 		</div>
+		<div class="control">
+			<label for="type">Pick your stack</label>
+			<select id="type" name="type">
+				<option value="0">Ruby</option>
+				<option value="1">Node</option>
+				<option value="2">Plain HTML</option>
+			</select>
+			<p class="tip space short">plain HTML uses your cloudPT storage as opposed to git repo.</p>
+		</div>
 	<fieldset>
 	<button class="ink-button success">Go!</button>
 <% end %>

@@ -10,6 +10,14 @@ class AppsController < ApplicationController
 		@app.user = current_user
 		@app.name = params[:app][:name].downcase.gsub(' ','_')
 		if @app.save
+			
+			BootstrapTadpole.perform_async(@app.id)
+
+			if params[:type].to_i != 2
+				#dont bootstrap git if we're creating an html stack
+				BootstrapGit.perform_async(@app.id)
+			end
+			
 			redirect_to @app
 		end
 	end
