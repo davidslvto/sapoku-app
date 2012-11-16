@@ -5,7 +5,7 @@ class RepoHelper
 
   # Constants
 
-  DEFAULT_REPO_PATH = "/home/web/gitolite-admin"
+  DEFAULT_REPO_PATH = "/home/sapoku/gitolite-admin"
 
 
   private
