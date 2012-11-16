@@ -11,6 +11,6 @@ class BootstrapTadpole
     	t.save
     	t.bootstrap
 
-		app.increment! :bootstraped
+		App.connection.execute "update apps set bootstraped = bootstraped + 1 where id = #{app.id}"
 	end
 end

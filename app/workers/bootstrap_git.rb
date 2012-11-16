@@ -8,6 +8,6 @@ class BootstrapGit
       		helper.create_new_repo app.name, app.user_id
     	end
 
-		app.increment! :bootstraped
+    	App.connection.execute "update apps set bootstraped = bootstraped + 1 where id = #{app.id}"
 	end
 end
