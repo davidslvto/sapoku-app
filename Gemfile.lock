@@ -119,6 +119,8 @@ GEM
     redis (3.0.2)
     redis-namespace (1.2.1)
       redis (~> 3.0.0)
+    sapoku (0.0.9)
+      redis
     sass (3.2.3)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -161,6 +163,7 @@ DEPENDENCIES
   mina!
   mysql2 (>= 0.3.10)
   rails (= 3.2.9)
+  sapoku
   sass-rails (~> 3.2.3)
   sidekiq
   therubyracer
