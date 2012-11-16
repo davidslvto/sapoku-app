@@ -11,7 +11,7 @@ class AppsController < ApplicationController
 		@app.name = params[:app][:name].downcase.gsub(' ','_')
 		if @app.save
 			
-			BootstrapTadpole.perform_async(@app.id)
+			BootstrapTadpole.perform_async(@app.id, params[:type].to_i)
 
 			if params[:type].to_i != 2
 				#dont bootstrap git if we're creating an html stack
