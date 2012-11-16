@@ -34,6 +34,8 @@ class AppsController < ApplicationController
 		@app = App.find_by_name params[:id]
 		@app.destroy
 
+		AppCleaner.perform_async @app.name
+
 		redirect_to '/'
 	end
 end
