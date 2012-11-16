@@ -16,5 +16,6 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'gitolite'
 gem 'sidekiq'
+gem 'sapoku'
 gem 'mina', :git => "git://github.com/Mic92/mina.git"
 gem 'sapoku'
