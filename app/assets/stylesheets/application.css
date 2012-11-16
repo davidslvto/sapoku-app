@@ -11,3 +11,19 @@
  *= require_self
  *= require_tree .
  */
+
+html {
+	background: #f0f0f0;
+}
+
+#mainwrap {
+	padding-top: 10px;
+}
+
+.mb {
+	margin-bottom: 30px;
+}
+
+.right {
+	float: right;
+}

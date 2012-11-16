@@ -1,5 +1,5 @@
 <% if @app.is_bootstrap_done? %>
-<h1><%= link_to @app.name, root_url(:subdomain => @app.name) %> is currently <% if (rand*10).to_i % 2 == 0 %><span class="ink-label caution">DOWN<span><% else %><span class="ink-label success">UP<span><% end %> </h1>
+<h1><%= link_to @app.name, "http://#{@app.name}.#{request.host}" %> is currently <% if (rand*10).to_i % 2 == 0 %><span class="ink-label caution">DOWN<span><% else %><span class="ink-label success">UP<span><% end %> </h1>
 <div class="row ink-vspace">
 	<div class="ink-l50">
 		<h4>Configure your git repo</h4>

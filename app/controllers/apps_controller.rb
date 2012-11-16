@@ -2,7 +2,7 @@ class AppsController < ApplicationController
 	before_filter :authenticate_user!
 
 	def index
-		@apps = App.find_by_user_id(current_user.id)
+		@apps = App.find_all_by_user_id(current_user.id)
 	end
 
 	def new
