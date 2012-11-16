@@ -14,7 +14,7 @@ class AppCleaner
       puts "Weird... couldn't find a tadpole for '#{app}'..."
     else
       puts "Destroying tadpole for '#{app}'..."
-      #tadpole.destroy
+      tadpole.destroy
     end
   end
 end
