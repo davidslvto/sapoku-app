@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Sapoku @ Codebits</title>
+        <title>Sapoku &mdash; Codebits</title>
         <meta name="description" content="">
 		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 		<meta name="HandheldFriendly" content="True">
@@ -28,7 +28,7 @@
 			<% if flash.alert %><div class="ink-alert error"><button class="ink-close">&times;</button><p><%= flash.alert %></p></div><% end %>
 			<nav class="ink-navigation ink-l100 mb">
 					<ul class="menu horizontal green">
-						<li class="ink-title"><a href="/">SapoKu</a></li>
+						<li class="ink-title"><a href="/">Sapoku</a></li>
 					<% if user_signed_in? %>
 						<li class="right"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
 						<li class="right"><%= link_to('My apps', apps_path) %></li>
