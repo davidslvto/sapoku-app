@@ -1,4 +1,9 @@
 <% if @app.is_bootstrap_done? %>
+
+<div class="ink-l100 mb center">
+	<h2><i class="icon-cloud icon-large"></i> <%= @app.name %>: Application details</h2>
+</div>
+
 <h1><%= link_to @app.name, "http://#{@app.name}.#{request.host}" %> is currently <% if !Tadpole.find(@app.name).running? %><span class="ink-label caution">DOWN<span><% else %><span class="ink-label success">UP<span><% end %> </h1>
 <div class="row ink-vspace">
 	<div class="ink-l100 center">
