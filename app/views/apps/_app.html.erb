@@ -1,3 +1,5 @@
-<div class="row">
-	<h5><%= link_to app.name, app %></h5>
-</div>
+<% pole = Tadpole.find(app.name) %>
+<td><%= link_to app.name, app %></td>
+<td><%= pole.stack %></td>
+<td><%= pole.container_ip %></td>
+<td><%= pole.running? %></td>
