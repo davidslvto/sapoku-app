@@ -7,7 +7,7 @@
 		<p><em>you need to already have a git repo for the app.</em></p>
 	</div>
 </div>
-
+<!--
 <div class="row ink-vspace">
 <div class="ink-l50">
 	<h2>Statistics</h2>
@@ -27,7 +27,8 @@
 	</ul>
 </div>
 </div>
-<p><%= image_tag 'murray.png' %>  <%= link_to "Delete this app :'(", @app, :method => :delete, :confirm => 'Are you really sure? There is no turning back!'  %> </p>
+-->
+<p><%= link_to "Delete application", @app, :method => :delete, :confirm => 'Are you really sure? There is no turning back!', :class => "ink-button caution" %> </p>
 <% else %>
 	<%= content_for :header do %>
 		<meta http-equiv="refresh" content="3"/>
