@@ -3,5 +3,12 @@
 <td><%= link_to app.name, app %></td>
 <td><%= pole.stack %></td>
 <td><%= pole.container_ip %></td>
-<td><%= pole.running? %></td>
+<td><%= pole.local_port %></td>
+<td>
+	<% if !pole.running? %>
+		<span class="ink-label caution">DOWN<span>
+	<% else %>
+		<span class="ink-label success">UP<span>
+	<% end %>
+</td>
 </tr>
