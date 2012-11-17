@@ -1,4 +1,6 @@
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'ink-form block ink-l50 ink-vspace'}) do |f| %>
+	<div class="ink-gutter">
+
 	<fieldset>
 		<legend>Sign in</legend>
 		<div class="control">
@@ -18,7 +20,8 @@
 		<% end -%>
 	</fieldset>
 
-  <%= f.submit "Sign in", :class => 'ink-button success' %>
+	  <%= f.submit "Sign in", :class => 'ink-button success' %>
+	 </div>
 <% end %>
 
 <%= content_for :footer do %>
