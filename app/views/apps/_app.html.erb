@@ -11,5 +11,8 @@
 			<span class="ink-label success">Running<span>
 		<% end %>
 	</td>
-	<td><a href="http://<%= app.name %>.sapoku.webreakstuff.com" class="ink-button">Visit</a></td>
+	<td>
+		<a href="http://<%= app.name %>.sapoku.webreakstuff.com" class="ink-button">Visit app</a>
+		<%= link_to "Destroy", @app, :method => :delete, :confirm => 'Are you really sure? There is no turning back!', :class => "ink-button caution" %>
+	</td>
 </tr>
