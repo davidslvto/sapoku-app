@@ -37,10 +37,13 @@
 	<ol>
 		<li>Work on your application</li>
 		<li>
-				Add our remote to your git repository<br/>
-				<code><mark>git remote add sapoku git@sapoku.webreakstuff.com:<%= @app.name %>.git</mark></code>
+			Add our remote to your git repository<br/>
+			<code><mark>git remote add sapoku git@sapoku.webreakstuff.com:<%= @app.name %>.git</mark></code>
 		</li>
-		<li>When ready to deploy, push to sepoku</li>
+		<li>
+			When ready to deploy, push to sapoku<br/>
+			<code><mark>git push sepoku master</mark></code>
+		</li>
 		<li>You're done! <a href="http://<%= @app.name %>.sapoku.webreakstuff.com">Refresh your browser</a>.</li>
 	</ol>
 </div>
