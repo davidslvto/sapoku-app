@@ -58,3 +58,8 @@ h2 i, h1 i {
 li code mark {
 	font-size: 0.8em;
 }
+
+.tiny {
+	width: 20px;
+	vertical-align: middle;
+}
