@@ -1,4 +1,5 @@
 <%= form_for @app, :html => {:class => 'ink-form block ink-l50'} do |f| %>
+	<div class="ink-gutter">
 	<fieldset>
 		<legend>One-click instant app</legend>
 		<div class="control">
@@ -16,9 +17,12 @@
 		</div>
 	</fieldset>
 	<button class="ink-button success">Launch my app</button>
+	</div>
 <% end %>
 
 <div class="ink-l50">
-	<h3>Getting started</h3>
-	<p>Getting started with Sapoku is easy. Create your first app by selecting one of our available stacks. The name of the app becomes the URL on which it is accessible, such as <mark>myapp.sapoku.com</mark>. Once we are done creating your container, you'll be taken to the container details page automatically.</p>
+	<div class="ink-gutter">
+		<h3>Getting started</h3>
+		<p>Getting started with Sapoku is easy. Create your first app by selecting one of our available stacks. The name of the app becomes the URL on which it is accessible, such as <mark>myapp.sapoku.com</mark>. Once we are done creating your container, you'll be taken to the container details page automatically.</p>
+	</div>
 </div>

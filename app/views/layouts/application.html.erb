@@ -28,7 +28,7 @@
 			<% if flash.alert %><div class="ink-alert error"><button class="ink-close">&times;</button><p><%= flash.alert %></p></div><% end %>
 			<nav class="ink-navigation ink-l100 mb">
 					<ul class="menu horizontal black">
-						<li class="ink-title"><%= link_to 'SapoKu', apps_path %></li>
+						<li class="ink-title"><%= link_to 'Sapoku', apps_path %></li>
 					<% if user_signed_in? %>
 						<li class="right"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
 						<li class="right"><%= link_to('Create App', new_app_path ) %></li>
