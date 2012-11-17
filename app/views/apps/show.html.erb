@@ -1,10 +1,9 @@
 <% if @app.is_bootstrap_done? %>
 
 <div class="ink-l100 mb center">
-	<h2><i class="icon-cloud icon-large"></i> <%= @app.name %>: Application details</h2>
+	<h2><i class="icon-cloud icon-large"></i> <%= @app.name %>: Application details <% if !Tadpole.find(@app.name).running? %><span class="ink-label caution">Down<span><% else %><span class="ink-label success">Running<span><% end %></h2>
 </div>
 
-<h1><%= link_to @app.name, "http://#{@app.name}.#{request.host}" %> is currently <% if !Tadpole.find(@app.name).running? %><span class="ink-label caution">DOWN<span><% else %><span class="ink-label success">UP<span><% end %> </h1>
 <div class="row ink-vspace">
 	<div class="ink-l100 center">
 		<h4>Configure your git repo</h4>
@@ -12,28 +11,9 @@
 		<p><em>you need to already have a git repo for the app.</em></p>
 	</div>
 </div>
-<!--
-<div class="row ink-vspace">
-<div class="ink-l50">
-	<h2>Statistics</h2>
-	<dl>
-		<dt>CPU Usage</dt>
-		<dd><em>coming soon</em></dd>
-		<dt>Memory Usage</dt>
-		<dd><em>coming soon</em></dd>
-	</dl>
-</div>
-<div class="ink-l50">
-	<h2>Version History</h2>
-	<ul>
-		<li><mark>coming soon</mark></li>
-		<li>coming soon</li>
-		<li>coming soono</li>
-	</ul>
-</div>
-</div>
--->
+
 <p><%= link_to "Delete application", @app, :method => :delete, :confirm => 'Are you really sure? There is no turning back!', :class => "ink-button caution" %> </p>
+
 <% else %>
 	<%= content_for :header do %>
 		<meta http-equiv="refresh" content="3"/>
