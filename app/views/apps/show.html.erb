@@ -34,11 +34,14 @@
 
 <div class="row ink-vspace">
 	<div class="ink-l50">
-		<h3>Deploying to <%= @app.name %></h3>
+		<h3>Deploying your application</h3>
 
 		<ol>
 			<li>Work on your application</li>
-			<li>Add our remote to your git repository</li>
+			<li>
+				Add our remote to your git repository<br/>
+				<code><mark>git@sapoku.webreakstuff.com:<%= @app.name %>.git</mark></code>
+			</li>
 			<li>When ready to deploy, push to sepoku</li>
 			<li>You're done! <a href="http://<%= @app.name %>.sapoku.webreakstuff.com">Refresh your browser</a>.</li>
 		</ol>
