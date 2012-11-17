@@ -60,6 +60,7 @@ li code mark {
 }
 
 .tiny {
-	width: 20px;
+	width: 16px;
+	margin-right: 4px;
 	vertical-align: middle;
 }
