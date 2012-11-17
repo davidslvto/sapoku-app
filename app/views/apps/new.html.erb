@@ -1,4 +1,3 @@
-<h1>Welcome to Sapoku!</h1>
 <%= form_for @app, :html => {:class => 'ink-form block ink-l50'} do |f| %>
 	<fieldset>
 		<legend>One-click instant app</legend>
@@ -11,11 +10,10 @@
 			<label for="type">Pick your stack</label>
 			<select id="type" name="type">
 				<option value="0">Ruby</option>
-				<option value="0">Node</option>
-				<option value="0">Plain HTML</option>
+				<option value="0">Node (soon)</option>
+				<option value="0">Plain HTML (soon)</option>
 			</select>
-			<p class="tip space short">plain HTML uses your cloudPT storage as opposed to git repo.</p>
 		</div>
-	<fieldset>
-	<button class="ink-button success">Go!</button>
+	</fieldset>
+	<button class="ink-button success">Launch my app</button>
 <% end %>

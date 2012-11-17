@@ -27,3 +27,12 @@ html {
 .right {
 	float: right;
 }
+
+.center {
+	text-align: center;
+}
+
+footer {
+	padding-top: 1em;
+	font-size: 0.9em;
+}
