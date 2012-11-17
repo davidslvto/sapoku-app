@@ -1,5 +1,5 @@
-<div class="ink-l100 mb">
-	<h1>Your current apps</h1>
+<div class="ink-l100 mb center">
+	<h2>Your current apps</h2>
 </div>
 
 <% if @apps.empty? %>
@@ -12,6 +12,7 @@
 			<th>Internal IP</th>
 			<th>Port</th>
 			<th>Status</th>
+			<th>&nbsp;</th>
 		</thead>
 		<tbody>
 			<%= render @apps %>

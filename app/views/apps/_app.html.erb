@@ -1,14 +1,15 @@
 <% pole = Tadpole.find(app.name) %>
 <tr>
-<td><%= link_to app.name, app %></td>
-<td><%= pole.stack %></td>
-<td><%= pole.container_ip %></td>
-<td><%= pole.local_port %></td>
-<td>
-	<% if !pole.running? %>
-		<span class="ink-label caution">Down<span>
-	<% else %>
-		<span class="ink-label success">Running<span>
-	<% end %>
-</td>
+	<td><%= link_to app.name, app %></td>
+	<td><%= pole.stack %></td>
+	<td><%= pole.container_ip %></td>
+	<td><%= pole.local_port %></td>
+	<td>
+		<% if !pole.running? %>
+			<span class="ink-label caution">Down<span>
+		<% else %>
+			<span class="ink-label success">Running<span>
+		<% end %>
+	</td>
+	<td><a href="http://<%= app.name %>.sapoku.webreakstuff.com" class="ink-button">Visit</a></td>
 </tr>
