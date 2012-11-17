@@ -35,15 +35,15 @@
 <div class="row ink-vspace">
 	<div class="ink-l50">
 		<h3>Deploying to <%= @app.name %></h3>
-		<h4>Configure your git repo</h4>
+		<h5>Build your code</h5>
+		<p>Work on your code, as you normally would.</p>
+		<h5>Add our remote to your git repository</h5>
 		<code>$><mark>git remote add sapoku git@sapoku.webreakstuff.com:<%=@app.name%>.git</mark></code>
-		<p><em>you need to already have a git repo for the app.</em></p>
+		<h5>When ready to deploy, push to sepoku</h5>
+		<code>$><mark>git push sepoku</mark></code>
 	</div>
 	<div class="ink-l50">
-		<h3>Deploying to <%= @app.name %></h3>
-		<h4>Configure your git repo</h4>
-		<code>$><mark>git remote add sapoku git@sapoku.webreakstuff.com:<%=@app.name%>.git</mark></code>
-		<p><em>you need to already have a git repo for the app.</em></p>
+		&nbsp;
 	</div>
 </div>
 
