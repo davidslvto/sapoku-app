@@ -1,7 +1,7 @@
 <% if @apps.empty? %>
 	<p class="ink-vspace">No apps yet. <%= link_to 'Click here', new_app_path %> to create one.</p>
 <% else %>
-	<table>
+	<table class="ink-table ink-bordered ink-zebra ink-hover">
 		<thead>
 			<th>App name</th>
 			<th>Stack</th>
