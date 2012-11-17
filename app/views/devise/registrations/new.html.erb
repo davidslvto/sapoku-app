@@ -1,3 +1,7 @@
+<div class="ink-row">
+  <div class="ink-l25">
+    &nbsp;
+  </div>
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'ink-form block ink-l50 ink-vspace'}) do |f| %>
   <%= devise_error_messages! %>
   <fieldset>
@@ -25,6 +29,7 @@
   </fieldset>
   <%= f.submit "Sign up", :class => 'ink-button success' %>
 <% end %>
+</div>
 
 <%= content_for :footer do %>
 <nav class="ink-navigation ink-l100">
