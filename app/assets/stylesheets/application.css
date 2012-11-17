@@ -16,6 +16,10 @@ html {
 	background: #f0f0f0;
 }
 
+#header img {
+	width: 200px;
+}
+
 #mainwrap {
 	padding-top: 10px;
 }
