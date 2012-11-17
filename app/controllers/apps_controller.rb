@@ -38,4 +38,8 @@ class AppsController < ApplicationController
 
 		redirect_to '/'
 	end
+
+	def rollback
+		@app = App.find_by_name params[:id]
+	end
 end
