@@ -100,7 +100,7 @@ class RepoHelper
 
     repo.clean_permissions
     repo.add_permission "RW+", "", *(users.map { |u| "user_#{u}" })
-    repo.add_permission "R", "", "gyro"
+    repo.add_permission "R", "", "tadpole"
     true
   end
 end
