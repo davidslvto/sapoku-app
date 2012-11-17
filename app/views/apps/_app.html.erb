@@ -1,5 +1,7 @@
 <% pole = Tadpole.find(app.name) %>
+<tr>
 <td><%= link_to app.name, app %></td>
 <td><%= pole.stack %></td>
 <td><%= pole.container_ip %></td>
 <td><%= pole.running? %></td>
+</tr>
