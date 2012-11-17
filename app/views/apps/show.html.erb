@@ -35,12 +35,13 @@
 <div class="row ink-vspace">
 	<div class="ink-l50">
 		<h3>Deploying to <%= @app.name %></h3>
-		<h5>Build your code</h5>
-		<p>Work on your code, as you normally would.</p>
-		<h5>Add our remote to your git repository</h5>
-		<code>$><mark>git remote add sapoku git@sapoku.webreakstuff.com:<%=@app.name%>.git</mark></code>
-		<h5>When ready to deploy, push to sepoku</h5>
-		<code>$><mark>git push sepoku</mark></code>
+
+		<ol>
+			<li>Work on your application</li>
+			<li>Add our remote to your git repository</li>
+			<li>When ready to deploy, push to sepoku</li>
+			<li>You're done! <a href="http://<%= @app.name %>.sapoku.webreakstuff.com">Refresh your browser</a>.</li>
+		</ol>
 	</div>
 	<div class="ink-l50">
 		&nbsp;
