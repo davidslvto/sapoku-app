@@ -1,8 +1,36 @@
 <% if @app.is_bootstrap_done? %>
+<% pole = Tadpole.find(@app.name) %>
 
 <div class="ink-l100 mb center">
-	<h2><i class="icon-cloud icon-large"></i> <%= @app.name %>: Application details <% if !Tadpole.find(@app.name).running? %><span class="ink-label caution">Down<span><% else %><span class="ink-label success">Running<span><% end %></h2>
+	<h2><i class="icon-cloud icon-large"></i> <%= @app.name %>: Application details <% if !pole.running? %><span class="ink-label caution">Down<span><% else %><span class="ink-label success">Running<span><% end %></h2>
 </div>
+
+<table class="ink-table ink-bordered ink-zebra ink-hover ink-vspace">
+	<thead>
+		<th>Stack</th>
+		<th>Internal IP</th>
+		<th>Port</th>
+		<th>Status</th>
+		<th style="width:80px;">Ops</th>
+	</thead>
+	<tbody>
+		<tr>
+			<td><%= pole.stack %></td>
+			<td><%= pole.container_ip %></td>
+			<td><%= pole.local_port %></td>
+			<td>
+				<% if !pole.running? %>
+					<span class="ink-label caution">Down<span>
+				<% else %>
+					<span class="ink-label success">Running<span>
+				<% end %>
+			</td>
+			<td style="width:80px;">
+				<a href="http://<%= @app.name %>.sapoku.webreakstuff.com" class="ink-button">Open</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
 
 <div class="row ink-vspace">
 	<div class="ink-l100 center">
